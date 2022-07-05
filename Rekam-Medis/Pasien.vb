@@ -181,7 +181,7 @@ Public Class Pasien
             cbjenkel.Focus()
         End If
     End Sub
-    Private Sub cbjenkel_KeyPress(sender As Object, e As KeyPressEventArgs) Handles cbjenkel.KeyPress
+    Private Sub cbjenkel_KeyPress(sender As Object, e As KeyPressEventArgs) 
         If e.KeyChar = Chr(13) Then
             cbagama.Focus()
         End If
@@ -207,5 +207,13 @@ Public Class Pasien
             btnupdate.Focus()
             btnhapus.Focus()
         End If
+    End Sub
+
+    Private Sub cbjenkel_SelectedIndexChanged(sender As Object, e As EventArgs) 
+
+    End Sub
+
+    Private Sub Label3_Click(sender As Object, e As EventArgs) 
+
     End Sub
 End Class

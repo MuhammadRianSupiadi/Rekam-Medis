@@ -1,22 +1,20 @@
 ﻿Imports MySql.Data.MySqlClient
-Public Class Dokter
+Public Class User
     Sub Tampil()
         Call OpenConn()
-        Da = New MySqlDataAdapter("select * from dokter", Conn)
+        Call KodeOtomatis()
+        Da = New MySqlDataAdapter("select * from user", Conn)
         Ds = New DataSet
-        Da.Fill(Ds, "dokter")
-        dgdokter.DataSource = Ds.Tables("dokter")
+        Da.Fill(Ds, "user")
+        dguser.DataSource = Ds.Tables("user")
 
         txtnama.Text = ""
-        txtsip.Text = ""
-        txtalamat.Text = ""
-        txttelp.Text = ""
+        txtpass.Text = ""
+
 
         txtkode.Enabled = False
         txtnama.Enabled = False
-        txtsip.Enabled = False
-        txtalamat.Enabled = False
-        txttelp.Enabled = False
+        txtpass.Enabled = False
 
         btntambah.Enabled = True
         btntambah.Text = "Tambah"
@@ -27,15 +25,37 @@ Public Class Dokter
         btnkeluar.Text = "Keluar"
     End Sub
     Sub Hidup()
-        txtkode.Enabled = True
         txtnama.Enabled = True
-        txtsip.Enabled = True
-        txtalamat.Enabled = True
-        txttelp.Enabled = True
+        txtpass.Enabled = True
     End Sub
-    Private Sub dokter_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Sub KodeOtomatis()
+        Call OpenConn()
+        Cmd = New MySqlCommand("select * from user where kd_user in (select max(kd_user) from user) ", Conn)
+        Rd = Cmd.ExecuteReader
+        Rd.Read()
+        If Rd.HasRows = 0 Then
+            txtkode.Text = "KDU001"
+            Rd.Close()
+        End If
+        If Not Rd.HasRows Then
+            txtkode.Text = "KDU" + "001"
+            Rd.Close()
+        Else
+            txtkode.Text = Microsoft.VisualBasic.Mid(Rd.Item("kd_user").ToString, 4, 3) + 1
+            If Len(txtkode.Text) = 1 Then
+                txtkode.Text = "KDU00" & txtkode.Text & ""
+            ElseIf Len(txtkode.Text) = 2 Then
+                txtkode.Text = "KDU0" & txtkode.Text & ""
+            ElseIf Len(txtkode.Text) = 3 Then
+                txtkode.Text = "KDU" & txtkode.Text & ""
+            End If
+            Rd.Close()
+        End If
+    End Sub
+    Private Sub user_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Tampil()
     End Sub
+
     Private Sub btntambah_Click(sender As Object, e As EventArgs) Handles btntambah.Click
         If btntambah.Text = "Tambah" Then
             btntambah.Text = "Simpan"
@@ -43,20 +63,20 @@ Public Class Dokter
             btnhapus.Enabled = False
             btnkeluar.Text = "&Batal"
             Call Hidup()
-            txtkode.Focus()
+            txtnama.Focus()
         Else
-            If txtkode.Text = "" Or txtnama.Text = "" Or txtsip.Text = "" Or txtalamat.Text = "" Or txttelp.Text = "" Then
+            If txtkode.Text = "" Or txtnama.Text = "" Or txtpass.Text = "" Then
                 MsgBox("Pastikan Semua Sudah Terisi")
             Else
                 Try
                     Call OpenConn()
-                    Dim InputData As String = "Insert into dokter values ( '" & txtkode.Text & "','" & txtnama.Text & "','" & txtsip.Text & "','" & txtalamat.Text & "','" & txttelp.Text & "')"
+                    Dim InputData As String = "Insert into user values ( '" & txtkode.Text & "','" & txtnama.Text & "','" & txtpass.Text & "')"
                     Cmd = New MySqlCommand(InputData, Conn)
                     Cmd.ExecuteNonQuery()
                     MsgBox("Data Berhasil diinput", MsgBoxStyle.MsgBoxRight, "pesan")
                     Call Tampil()
                 Catch ex As Exception
-                    MsgBox("Data Gagal Disimpan...... Periksa Koneksi Ada!", MsgBoxStyle.MsgBoxRight, "Pesan")
+                    MsgBox("Data Gagal Disimpan...... Periksa Koneksi Anda!", MsgBoxStyle.MsgBoxRight, "Pesan")
                 End Try
             End If
         End If
@@ -69,20 +89,20 @@ Public Class Dokter
             btnhapus.Enabled = False
             btnkeluar.Text = "&Batal"
             Call Hidup()
-            txtkode.Focus()
+            txtnama.Focus()
         Else
-            If txtkode.Text = "" Or txtnama.Text = "" Or txtsip.Text = "" Or txtalamat.Text = "" Or txttelp.Text = "" Then
+            If txtkode.Text = "" Or txtnama.Text = "" Or txtpass.Text = "" Then
                 MsgBox("Pastikan Semua Sudah Terisi")
             Else
                 Try
                     Call OpenConn()
-                    Dim UpdateData As String = "update dokter Set nama_dokter= '" & txtnama.Text & "',sip='" & txtsip.Text & "',alamat= '" & txtalamat.Text & "',telp= '" & txttelp.Text & "' Where kd_dokter= '" & txtkode.Text & "'"
+                    Dim UpdateData As String = "update user Set nama= '" & txtnama.Text & "',password='" & txtpass.Text & "'  Where kd_user= '" & txtkode.Text & "'"
                     Cmd = New MySqlCommand(UpdateData, Conn)
                     Cmd.ExecuteNonQuery()
                     MsgBox("Data Berhasil diupdate", MsgBoxStyle.MsgBoxRight, "Pesan")
                     Call Tampil()
                 Catch ex As Exception
-                    MsgBox("Data Gagal Disimpan...... Periksa Koneksi Ada!", MsgBoxStyle.MsgBoxRight, "Pesan")
+                    MsgBox("Data Gagal Diupdate...... Periksa Koneksi Anda!", MsgBoxStyle.MsgBoxRight, "Pesan")
                 End Try
             End If
         End If
@@ -90,25 +110,25 @@ Public Class Dokter
 
     Private Sub btnhapus_Click(sender As Object, e As EventArgs) Handles btnhapus.Click
         If btnhapus.Text = "Hapus" Then
-            btnhapus.Text = "DELET"
+            btnhapus.Text = "Delete"
             btntambah.Enabled = False
             btnupdate.Enabled = False
             btnkeluar.Text = "&Batal"
             Call Hidup()
             txtnama.Focus()
         Else
-            If txtkode.Text = "" Or txtnama.Text = "" Or txtsip.Text = "" Or txtalamat.Text = "" Or txttelp.Text = "" Then
+            If txtkode.Text = "" Or txtnama.Text = "" Or txtpass.Text = "" Then
                 MsgBox("Pastikan Semua Sudah Terisi")
             Else
                 Try
                     Call OpenConn()
-                    Dim InputData As String = "delete from dokter Where kd_dokter='" & txtkode.Text & "'"
+                    Dim InputData As String = "Delete from user Where kd_user='" & txtkode.Text & "'"
                     Cmd = New MySqlCommand(InputData, Conn)
                     Cmd.ExecuteNonQuery()
-                    MsgBox("Data Berhasil Dihapus", MsgBoxStyle.MsgBoxRight, "pesan")
+                    MsgBox("Data Berhasil dihapus", MsgBoxStyle.MsgBoxRight, "pesan")
                     Call Tampil()
                 Catch ex As Exception
-                    MsgBox("Data Gagal Disimpan...... Periksa Koneksi Ada!", MsgBoxStyle.MsgBoxRight, "Pesan")
+                    MsgBox("Data Gagal DiHapus...... Periksa Data Ada!", MsgBoxStyle.MsgBoxRight, "Pesan")
                 End Try
             End If
         End If
@@ -121,43 +141,45 @@ Public Class Dokter
             Call Tampil()
         End If
     End Sub
+
     Private Sub txtkode_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtkode.KeyPress
         If e.KeyChar = Chr(13) Then
             Call OpenConn()
-            Cmd = New MySqlCommand("select * from dokter where kd_dokter = '" & txtkode.Text & "'", Conn)
+            Cmd = New MySqlCommand("select * from user where kd_user = '" & txtkode.Text & "'", Conn)
             Rd = Cmd.ExecuteReader()
             Rd.Read()
             If Not Rd.HasRows Then
                 MsgBox("Data Tidak Ada!")
             Else
-                txtnama.Text = Rd.Item("nama_obat")
-                txtnama.Text = Rd.Item("nama_dokter")
-                txtsip.Text = Rd.Item("sip")
-                txtalamat.Text = Rd.Item("alamat")
-                txttelp.Text = Rd.Item("telp")
+                txtnama.Text = Rd.Item("nama_user")
+                txtpass.Text = Rd.Item("password")
             End If
         End If
     End Sub
-    Private Sub dgdokter_Click(sender As Object, e As EventArgs) Handles dgdokter.Click
-        If dgdokter.RowCount > 0 Then
-            Dim i As Integer
-            With dgdokter
-                i = .CurrentRow.Index
-                txtkode.Text = dgdokter.Item(0, i).Value
-                txtnama.Text = dgdokter.Item(1, i).Value
-                txtsip.Text = dgdokter.Item(2, i).Value
-                txtalamat.Text = dgdokter.Item(3, i).Value
-                txttelp.Text = dgdokter.Item(4, i).Value
-                txtnama.Focus()
-            End With
+
+    Private Sub txtnama_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtnama.KeyPress
+        If e.KeyChar = Chr(13) Then
+            txtpass.Focus()
+        End If
+    End Sub
+    Private Sub txtpass_KeyPress(sender As Object, e As KeyPressEventArgs) Handles txtpass.KeyPress
+        If e.KeyChar = Chr(13) Then
+            btntambah.Focus()
+            btnupdate.Focus()
+            btnhapus.Focus()
         End If
     End Sub
 
-    Private Sub txtalamat_TextChanged(sender As Object, e As EventArgs) Handles txtalamat.TextChanged
-
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
+    Private Sub dguser_Click(sender As Object, e As EventArgs) Handles dguser.Click
+        If dguser.RowCount > 0 Then
+            Dim i As Integer
+            With dguser
+                i = .CurrentRow.Index
+                txtkode.Text = .Item(0, i).Value
+                txtnama.Text = .Item(1, i).Value
+                txtpass.Text = .Item(2, i).Value
+                txtnama.Focus()
+            End With
+        End If
     End Sub
 End Class

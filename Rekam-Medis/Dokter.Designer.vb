@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dokter
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Dokter
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dokter))
         Me.btnkeluar = New System.Windows.Forms.Button()
@@ -46,7 +46,7 @@ Partial Class Dokter
         Me.btnkeluar.BackgroundImage = CType(resources.GetObject("btnkeluar.BackgroundImage"), System.Drawing.Image)
         Me.btnkeluar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnkeluar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnkeluar.Location = New System.Drawing.Point(523, 330)
+        Me.btnkeluar.Location = New System.Drawing.Point(523, 339)
         Me.btnkeluar.Name = "btnkeluar"
         Me.btnkeluar.Size = New System.Drawing.Size(75, 64)
         Me.btnkeluar.TabIndex = 124
@@ -59,7 +59,7 @@ Partial Class Dokter
         Me.btnupdate.BackgroundImage = CType(resources.GetObject("btnupdate.BackgroundImage"), System.Drawing.Image)
         Me.btnupdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnupdate.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnupdate.Location = New System.Drawing.Point(183, 330)
+        Me.btnupdate.Location = New System.Drawing.Point(183, 339)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(83, 64)
         Me.btnupdate.TabIndex = 123
@@ -72,7 +72,7 @@ Partial Class Dokter
         Me.btnhapus.BackgroundImage = CType(resources.GetObject("btnhapus.BackgroundImage"), System.Drawing.Image)
         Me.btnhapus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnhapus.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnhapus.Location = New System.Drawing.Point(353, 329)
+        Me.btnhapus.Location = New System.Drawing.Point(353, 338)
         Me.btnhapus.Name = "btnhapus"
         Me.btnhapus.Size = New System.Drawing.Size(83, 64)
         Me.btnhapus.TabIndex = 122
@@ -86,7 +86,7 @@ Partial Class Dokter
         Me.btntambah.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btntambah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btntambah.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btntambah.Location = New System.Drawing.Point(13, 330)
+        Me.btntambah.Location = New System.Drawing.Point(13, 339)
         Me.btntambah.Name = "btntambah"
         Me.btntambah.Size = New System.Drawing.Size(83, 64)
         Me.btntambah.TabIndex = 121
@@ -96,7 +96,7 @@ Partial Class Dokter
         '
         'txtalamat
         '
-        Me.txtalamat.Location = New System.Drawing.Point(406, 26)
+        Me.txtalamat.Location = New System.Drawing.Point(406, 22)
         Me.txtalamat.Multiline = True
         Me.txtalamat.Name = "txtalamat"
         Me.txtalamat.Size = New System.Drawing.Size(192, 52)
@@ -104,7 +104,7 @@ Partial Class Dokter
         '
         'txtsip
         '
-        Me.txtsip.Location = New System.Drawing.Point(123, 101)
+        Me.txtsip.Location = New System.Drawing.Point(123, 109)
         Me.txtsip.Name = "txtsip"
         Me.txtsip.Size = New System.Drawing.Size(123, 20)
         Me.txtsip.TabIndex = 119
@@ -118,7 +118,7 @@ Partial Class Dokter
         '
         'txtnama
         '
-        Me.txtnama.Location = New System.Drawing.Point(123, 62)
+        Me.txtnama.Location = New System.Drawing.Point(123, 67)
         Me.txtnama.Name = "txtnama"
         Me.txtnama.Size = New System.Drawing.Size(123, 20)
         Me.txtnama.TabIndex = 117
@@ -134,7 +134,7 @@ Partial Class Dokter
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 104)
+        Me.Label4.Location = New System.Drawing.Point(12, 112)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(105, 13)
         Me.Label4.TabIndex = 112
@@ -144,7 +144,7 @@ Partial Class Dokter
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 65)
+        Me.Label2.Location = New System.Drawing.Point(12, 70)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(81, 13)
         Me.Label2.TabIndex = 111
@@ -164,7 +164,7 @@ Partial Class Dokter
         '
         Me.dgdokter.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgdokter.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgdokter.Location = New System.Drawing.Point(15, 150)
+        Me.dgdokter.Location = New System.Drawing.Point(15, 157)
         Me.dgdokter.Name = "dgdokter"
         Me.dgdokter.Size = New System.Drawing.Size(586, 164)
         Me.dgdokter.TabIndex = 115
@@ -183,7 +183,7 @@ Partial Class Dokter
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(308, 26)
+        Me.Label5.Location = New System.Drawing.Point(312, 29)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(45, 13)
         Me.Label5.TabIndex = 113
@@ -211,6 +211,7 @@ Partial Class Dokter
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label5)
         Me.Name = "Dokter"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Dokter"
         CType(Me.dgdokter, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -31,7 +31,6 @@ Partial Class Menu_Utama
         Me.UserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TransaksiToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RekamMedisToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.LaporanToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KeluarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -39,7 +38,7 @@ Partial Class Menu_Utama
         'MenuStrip1
         '
         Me.MenuStrip1.BackColor = System.Drawing.Color.LightSeaGreen
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterDataToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.LaporanToolStripMenuItem, Me.KeluarToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MasterDataToolStripMenuItem, Me.TransaksiToolStripMenuItem, Me.KeluarToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(676, 33)
@@ -58,25 +57,25 @@ Partial Class Menu_Utama
         'PasienToolStripMenuItem
         '
         Me.PasienToolStripMenuItem.Name = "PasienToolStripMenuItem"
-        Me.PasienToolStripMenuItem.Size = New System.Drawing.Size(180, 30)
+        Me.PasienToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.PasienToolStripMenuItem.Text = "Pasien"
         '
         'DokterToolStripMenuItem
         '
         Me.DokterToolStripMenuItem.Name = "DokterToolStripMenuItem"
-        Me.DokterToolStripMenuItem.Size = New System.Drawing.Size(180, 30)
+        Me.DokterToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.DokterToolStripMenuItem.Text = "Dokter"
         '
         'ObatToolStripMenuItem
         '
         Me.ObatToolStripMenuItem.Name = "ObatToolStripMenuItem"
-        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(180, 30)
+        Me.ObatToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.ObatToolStripMenuItem.Text = "Obat"
         '
         'UserToolStripMenuItem
         '
         Me.UserToolStripMenuItem.Name = "UserToolStripMenuItem"
-        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(180, 30)
+        Me.UserToolStripMenuItem.Size = New System.Drawing.Size(146, 30)
         Me.UserToolStripMenuItem.Text = "User"
         '
         'TransaksiToolStripMenuItem
@@ -93,14 +92,6 @@ Partial Class Menu_Utama
         Me.RekamMedisToolStripMenuItem.Name = "RekamMedisToolStripMenuItem"
         Me.RekamMedisToolStripMenuItem.Size = New System.Drawing.Size(202, 30)
         Me.RekamMedisToolStripMenuItem.Text = "Rekam Medis"
-        '
-        'LaporanToolStripMenuItem
-        '
-        Me.LaporanToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LaporanToolStripMenuItem.ForeColor = System.Drawing.Color.MintCream
-        Me.LaporanToolStripMenuItem.Name = "LaporanToolStripMenuItem"
-        Me.LaporanToolStripMenuItem.Size = New System.Drawing.Size(98, 29)
-        Me.LaporanToolStripMenuItem.Text = "Laporan"
         '
         'KeluarToolStripMenuItem
         '
@@ -137,6 +128,5 @@ Partial Class Menu_Utama
     Friend WithEvents UserToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TransaksiToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RekamMedisToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents LaporanToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents KeluarToolStripMenuItem As ToolStripMenuItem
 End Class

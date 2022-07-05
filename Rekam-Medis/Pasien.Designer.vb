@@ -24,7 +24,6 @@ Partial Class Pasien
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Pasien))
         Me.dtlahir = New System.Windows.Forms.DateTimePicker()
-        Me.cbjenkel = New System.Windows.Forms.ComboBox()
         Me.btnkeluar = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.btnhapus = New System.Windows.Forms.Button()
@@ -35,13 +34,14 @@ Partial Class Pasien
         Me.txtno = New System.Windows.Forms.TextBox()
         Me.cbagama = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgpasien = New System.Windows.Forms.DataGridView()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.cbjenkel = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.dgpasien, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -52,15 +52,6 @@ Partial Class Pasien
         Me.dtlahir.Size = New System.Drawing.Size(195, 20)
         Me.dtlahir.TabIndex = 126
         Me.dtlahir.Value = New Date(2022, 6, 24, 21, 42, 39, 0)
-        '
-        'cbjenkel
-        '
-        Me.cbjenkel.FormattingEnabled = True
-        Me.cbjenkel.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
-        Me.cbjenkel.Location = New System.Drawing.Point(117, 88)
-        Me.cbjenkel.Name = "cbjenkel"
-        Me.cbjenkel.Size = New System.Drawing.Size(123, 21)
-        Me.cbjenkel.TabIndex = 125
         '
         'btnkeluar
         '
@@ -147,7 +138,7 @@ Partial Class Pasien
         '
         Me.cbagama.FormattingEnabled = True
         Me.cbagama.Items.AddRange(New Object() {"Islam", "Protestan", "Kristen", "Hindu", "Budha"})
-        Me.cbagama.Location = New System.Drawing.Point(117, 135)
+        Me.cbagama.Location = New System.Drawing.Point(117, 117)
         Me.cbagama.Name = "cbagama"
         Me.cbagama.Size = New System.Drawing.Size(123, 21)
         Me.cbagama.TabIndex = 116
@@ -156,21 +147,11 @@ Partial Class Pasien
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(12, 135)
+        Me.Label4.Location = New System.Drawing.Point(12, 120)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(45, 13)
         Me.Label4.TabIndex = 111
         Me.Label4.Text = "Agama"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 96)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(84, 13)
-        Me.Label3.TabIndex = 110
-        Me.Label3.Text = "Jenis Kelamin"
         '
         'Label2
         '
@@ -196,7 +177,7 @@ Partial Class Pasien
         '
         Me.dgpasien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.dgpasien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgpasien.Location = New System.Drawing.Point(15, 171)
+        Me.dgpasien.Location = New System.Drawing.Point(15, 150)
         Me.dgpasien.Name = "dgpasien"
         Me.dgpasien.Size = New System.Drawing.Size(586, 164)
         Me.dgpasien.TabIndex = 115
@@ -231,14 +212,34 @@ Partial Class Pasien
         Me.Label5.TabIndex = 112
         Me.Label5.Text = "Alamat"
         '
+        'cbjenkel
+        '
+        Me.cbjenkel.FormattingEnabled = True
+        Me.cbjenkel.Items.AddRange(New Object() {"Laki-Laki", "Perempuan"})
+        Me.cbjenkel.Location = New System.Drawing.Point(117, 84)
+        Me.cbjenkel.Name = "cbjenkel"
+        Me.cbjenkel.Size = New System.Drawing.Size(123, 21)
+        Me.cbjenkel.TabIndex = 128
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(12, 87)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(84, 13)
+        Me.Label3.TabIndex = 127
+        Me.Label3.Text = "Jenis Kelamin"
+        '
         'Pasien
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightSeaGreen
         Me.ClientSize = New System.Drawing.Size(612, 420)
-        Me.Controls.Add(Me.dtlahir)
         Me.Controls.Add(Me.cbjenkel)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.dtlahir)
         Me.Controls.Add(Me.btnkeluar)
         Me.Controls.Add(Me.btnupdate)
         Me.Controls.Add(Me.btnhapus)
@@ -249,7 +250,6 @@ Partial Class Pasien
         Me.Controls.Add(Me.txtno)
         Me.Controls.Add(Me.cbagama)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.dgpasien)
@@ -257,6 +257,7 @@ Partial Class Pasien
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
         Me.Name = "Pasien"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Pasien"
         CType(Me.dgpasien, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -265,7 +266,6 @@ Partial Class Pasien
     End Sub
 
     Friend WithEvents dtlahir As DateTimePicker
-    Friend WithEvents cbjenkel As ComboBox
     Friend WithEvents btnkeluar As Button
     Friend WithEvents btnupdate As Button
     Friend WithEvents btnhapus As Button
@@ -276,11 +276,12 @@ Partial Class Pasien
     Friend WithEvents txtno As TextBox
     Friend WithEvents cbagama As ComboBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents dgpasien As DataGridView
     Friend WithEvents Label7 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
+    Friend WithEvents cbjenkel As ComboBox
+    Friend WithEvents Label3 As Label
 End Class

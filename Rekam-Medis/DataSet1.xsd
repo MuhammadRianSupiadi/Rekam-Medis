@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="rekam_medis" msprop:Generator_TableClassName="rekam_medisDataTable" msprop:Generator_TableVarName="tablerekam_medis" msprop:Generator_TablePropName="rekam_medis" msprop:Generator_RowDeletingName="rekam_medisRowDeleting" msprop:Generator_RowChangingName="rekam_medisRowChanging" msprop:Generator_RowEvHandlerName="rekam_medisRowChangeEventHandler" msprop:Generator_RowDeletedName="rekam_medisRowDeleted" msprop:Generator_UserTableName="rekam_medis" msprop:Generator_RowChangedName="rekam_medisRowChanged" msprop:Generator_RowEvArgName="rekam_medisRowChangeEvent" msprop:Generator_RowClassName="rekam_medisRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_rekam" msprop:Generator_ColumnVarNameInTable="columnno_rekam" msprop:Generator_ColumnPropNameInRow="no_rekam" msprop:Generator_ColumnPropNameInTable="no_rekamColumn" msprop:Generator_UserColumnName="no_rekam" type="xs:string" minOccurs="0" />
+              <xs:element name="tgl" msprop:Generator_ColumnVarNameInTable="columntgl" msprop:Generator_ColumnPropNameInRow="tgl" msprop:Generator_ColumnPropNameInTable="tglColumn" msprop:Generator_UserColumnName="tgl" type="xs:string" minOccurs="0" />
+              <xs:element name="keluhan" msprop:Generator_ColumnVarNameInTable="columnkeluhan" msprop:Generator_ColumnPropNameInRow="keluhan" msprop:Generator_ColumnPropNameInTable="keluhanColumn" msprop:Generator_UserColumnName="keluhan" type="xs:string" minOccurs="0" />
+              <xs:element name="diagnosa" msprop:Generator_ColumnVarNameInTable="columndiagnosa" msprop:Generator_ColumnPropNameInRow="diagnosa" msprop:Generator_ColumnPropNameInTable="diagnosaColumn" msprop:Generator_UserColumnName="diagnosa" type="xs:string" minOccurs="0" />
+              <xs:element name="keterangan" msprop:Generator_ColumnVarNameInTable="columnketerangan" msprop:Generator_ColumnPropNameInRow="keterangan" msprop:Generator_ColumnPropNameInTable="keteranganColumn" msprop:Generator_UserColumnName="keterangan" type="xs:string" minOccurs="0" />
+              <xs:element name="jumlah_obat" msprop:Generator_ColumnVarNameInTable="columnjumlah_obat" msprop:Generator_ColumnPropNameInRow="jumlah_obat" msprop:Generator_ColumnPropNameInTable="jumlah_obatColumn" msprop:Generator_UserColumnName="jumlah_obat" type="xs:string" minOccurs="0" />
+              <xs:element name="biaya_dokter" msprop:Generator_ColumnVarNameInTable="columnbiaya_dokter" msprop:Generator_ColumnPropNameInRow="biaya_dokter" msprop:Generator_ColumnPropNameInTable="biaya_dokterColumn" msprop:Generator_UserColumnName="biaya_dokter" type="xs:string" minOccurs="0" />
+              <xs:element name="biaya_obat" msprop:Generator_ColumnVarNameInTable="columnbiaya_obat" msprop:Generator_ColumnPropNameInRow="biaya_obat" msprop:Generator_ColumnPropNameInTable="biaya_obatColumn" msprop:Generator_UserColumnName="biaya_obat" type="xs:string" minOccurs="0" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:string" minOccurs="0" />
+              <xs:element name="kd_dokter" msprop:Generator_ColumnVarNameInTable="columnkd_dokter" msprop:Generator_ColumnPropNameInRow="kd_dokter" msprop:Generator_ColumnPropNameInTable="kd_dokterColumn" msprop:Generator_UserColumnName="kd_dokter" type="xs:string" minOccurs="0" />
+              <xs:element name="no_pasien" msprop:Generator_ColumnVarNameInTable="columnno_pasien" msprop:Generator_ColumnPropNameInRow="no_pasien" msprop:Generator_ColumnPropNameInTable="no_pasienColumn" msprop:Generator_UserColumnName="no_pasien" type="xs:string" minOccurs="0" />
+              <xs:element name="kd_user" msprop:Generator_ColumnVarNameInTable="columnkd_user" msprop:Generator_ColumnPropNameInRow="kd_user" msprop:Generator_ColumnPropNameInTable="kd_userColumn" msprop:Generator_UserColumnName="kd_user" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="pasien" msprop:Generator_TableClassName="pasienDataTable" msprop:Generator_TableVarName="tablepasien" msprop:Generator_RowChangedName="pasienRowChanged" msprop:Generator_TablePropName="pasien" msprop:Generator_RowDeletingName="pasienRowDeleting" msprop:Generator_RowChangingName="pasienRowChanging" msprop:Generator_RowEvHandlerName="pasienRowChangeEventHandler" msprop:Generator_RowDeletedName="pasienRowDeleted" msprop:Generator_RowClassName="pasienRow" msprop:Generator_UserTableName="pasien" msprop:Generator_RowEvArgName="pasienRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="no_pasien" msprop:Generator_ColumnVarNameInTable="columnno_pasien" msprop:Generator_ColumnPropNameInRow="no_pasien" msprop:Generator_ColumnPropNameInTable="no_pasienColumn" msprop:Generator_UserColumnName="no_pasien" type="xs:string" minOccurs="0" />
+              <xs:element name="nama_pasien" msprop:Generator_ColumnVarNameInTable="columnnama_pasien" msprop:Generator_ColumnPropNameInRow="nama_pasien" msprop:Generator_ColumnPropNameInTable="nama_pasienColumn" msprop:Generator_UserColumnName="nama_pasien" type="xs:string" minOccurs="0" />
+              <xs:element name="jenis_kelamin" msprop:Generator_ColumnVarNameInTable="columnjenis_kelamin" msprop:Generator_ColumnPropNameInRow="jenis_kelamin" msprop:Generator_ColumnPropNameInTable="jenis_kelaminColumn" msprop:Generator_UserColumnName="jenis_kelamin" type="xs:string" minOccurs="0" />
+              <xs:element name="agama" msprop:Generator_ColumnVarNameInTable="columnagama" msprop:Generator_ColumnPropNameInRow="agama" msprop:Generator_ColumnPropNameInTable="agamaColumn" msprop:Generator_UserColumnName="agama" type="xs:string" minOccurs="0" />
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" type="xs:string" minOccurs="0" />
+              <xs:element name="tgl_lahir" msprop:Generator_ColumnVarNameInTable="columntgl_lahir" msprop:Generator_ColumnPropNameInRow="tgl_lahir" msprop:Generator_ColumnPropNameInTable="tgl_lahirColumn" msprop:Generator_UserColumnName="tgl_lahir" type="xs:string" minOccurs="0" />
+              <xs:element name="telp" msprop:Generator_ColumnVarNameInTable="columntelp" msprop:Generator_ColumnPropNameInRow="telp" msprop:Generator_ColumnPropNameInTable="telpColumn" msprop:Generator_UserColumnName="telp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dokter" msprop:Generator_TableClassName="dokterDataTable" msprop:Generator_TableVarName="tabledokter" msprop:Generator_RowChangedName="dokterRowChanged" msprop:Generator_TablePropName="dokter" msprop:Generator_RowDeletingName="dokterRowDeleting" msprop:Generator_RowChangingName="dokterRowChanging" msprop:Generator_RowEvHandlerName="dokterRowChangeEventHandler" msprop:Generator_RowDeletedName="dokterRowDeleted" msprop:Generator_RowClassName="dokterRow" msprop:Generator_UserTableName="dokter" msprop:Generator_RowEvArgName="dokterRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kd_dokter" msprop:Generator_ColumnVarNameInTable="columnkd_dokter" msprop:Generator_ColumnPropNameInRow="kd_dokter" msprop:Generator_ColumnPropNameInTable="kd_dokterColumn" msprop:Generator_UserColumnName="kd_dokter" type="xs:string" minOccurs="0" />
+              <xs:element name="nama_dokter" msprop:Generator_ColumnVarNameInTable="columnnama_dokter" msprop:Generator_ColumnPropNameInRow="nama_dokter" msprop:Generator_ColumnPropNameInTable="nama_dokterColumn" msprop:Generator_UserColumnName="nama_dokter" type="xs:string" minOccurs="0" />
+              <xs:element name="sip" msprop:Generator_ColumnVarNameInTable="columnsip" msprop:Generator_ColumnPropNameInRow="sip" msprop:Generator_ColumnPropNameInTable="sipColumn" msprop:Generator_UserColumnName="sip" type="xs:string" minOccurs="0" />
+              <xs:element name="alamat" msprop:Generator_ColumnVarNameInTable="columnalamat" msprop:Generator_ColumnPropNameInRow="alamat" msprop:Generator_ColumnPropNameInTable="alamatColumn" msprop:Generator_UserColumnName="alamat" type="xs:string" minOccurs="0" />
+              <xs:element name="telp" msprop:Generator_ColumnVarNameInTable="columntelp" msprop:Generator_ColumnPropNameInRow="telp" msprop:Generator_ColumnPropNameInTable="telpColumn" msprop:Generator_UserColumnName="telp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="obat" msprop:Generator_TableClassName="obatDataTable" msprop:Generator_TableVarName="tableobat" msprop:Generator_RowChangedName="obatRowChanged" msprop:Generator_TablePropName="obat" msprop:Generator_RowDeletingName="obatRowDeleting" msprop:Generator_RowChangingName="obatRowChanging" msprop:Generator_RowEvHandlerName="obatRowChangeEventHandler" msprop:Generator_RowDeletedName="obatRowDeleted" msprop:Generator_RowClassName="obatRow" msprop:Generator_UserTableName="obat" msprop:Generator_RowEvArgName="obatRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="kd_obat" msprop:Generator_ColumnVarNameInTable="columnkd_obat" msprop:Generator_ColumnPropNameInRow="kd_obat" msprop:Generator_ColumnPropNameInTable="kd_obatColumn" msprop:Generator_UserColumnName="kd_obat" type="xs:string" minOccurs="0" />
+              <xs:element name="nama_obat" msprop:Generator_ColumnVarNameInTable="columnnama_obat" msprop:Generator_ColumnPropNameInRow="nama_obat" msprop:Generator_ColumnPropNameInTable="nama_obatColumn" msprop:Generator_UserColumnName="nama_obat" type="xs:string" minOccurs="0" />
+              <xs:element name="stok" msprop:Generator_ColumnVarNameInTable="columnstok" msprop:Generator_ColumnPropNameInRow="stok" msprop:Generator_ColumnPropNameInTable="stokColumn" msprop:Generator_UserColumnName="stok" type="xs:string" minOccurs="0" />
+              <xs:element name="ukuran" msprop:Generator_ColumnVarNameInTable="columnukuran" msprop:Generator_ColumnPropNameInRow="ukuran" msprop:Generator_ColumnPropNameInTable="ukuranColumn" msprop:Generator_UserColumnName="ukuran" type="xs:string" minOccurs="0" />
+              <xs:element name="harga" msprop:Generator_ColumnVarNameInTable="columnharga" msprop:Generator_ColumnPropNameInRow="harga" msprop:Generator_ColumnPropNameInTable="hargaColumn" msprop:Generator_UserColumnName="harga" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="rekam_medisKey1">
+      <xs:selector xpath=".//mstns:rekam_medis" />
+      <xs:field xpath="mstns:no_rekam" />
+    </xs:unique>
+    <xs:unique name="pasienKey1">
+      <xs:selector xpath=".//mstns:pasien" />
+      <xs:field xpath="mstns:no_pasien" />
+    </xs:unique>
+    <xs:unique name="dokterKey1">
+      <xs:selector xpath=".//mstns:dokter" />
+      <xs:field xpath="mstns:kd_dokter" />
+    </xs:unique>
+    <xs:unique name="obatKey1">
+      <xs:selector xpath=".//mstns:obat" />
+      <xs:field xpath="mstns:kd_obat" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
